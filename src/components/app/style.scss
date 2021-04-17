@@ -1,0 +1,55 @@
+@import '../../_color.scss';
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.panel {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #246db2;
+    margin-bottom: 1rem;
+    padding: 0 3rem;
+    position: fixed;
+    z-index: 100;
+
+    @media screen and (max-width: 800px) {
+        height: 140px;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 46px;
+        color: $first-color;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1366px) {
+            font-size: 40px;
+        }
+
+        @media screen and (max-width: 900px) {
+            font-size: 34px;
+        }
+    }
+
+    &__find-input {
+        height: 2rem;
+        padding: 0 0.5rem;
+        box-shadow: 0 0.2em black, 0 -0.2em black, 0.2em 0 black, -0.2em 0 black;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 900px) {
+            font-size: 0.8rem;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0.2em $first-color, 0 -0.2em $first-color, 0.2em 0 $first-color, -0.2em 0 $first-color;
+        }
+    }
+}
